@@ -8,11 +8,12 @@ const routes = require("./server/routes");
 
 require("dotenv").config();
 
-app.use(express.json());
 app.use(cors());
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }))
 app.use(cookieParser());
 
-/* app.use("/api", routes); */
+app.use("/api", routes);
 
 const PORT = process.env.PORT || 3001;
 
