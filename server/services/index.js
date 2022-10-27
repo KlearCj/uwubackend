@@ -1,4 +1,4 @@
 const moviesRequest = require('./movies')
+const tvRequest= require('./tvshows')
 
-
-module.exports={moviesRequest}
+module.exports={moviesRequest, tvRequest}

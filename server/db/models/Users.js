@@ -15,7 +15,7 @@ Users.init(
   {
     username: { type: S.STRING, allowNull: false, unique: true },
     email: { type: S.STRING, isEmail: true, allowNull: false, unique: true },
-    password: { type: S.STRING },
+    password: { type: S.STRING, allowNull:false },
     salt: { type: S.STRING },
   },
   { sequelize: db, modelName: "users" }
