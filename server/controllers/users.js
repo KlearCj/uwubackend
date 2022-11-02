@@ -1,5 +1,5 @@
 const { generateToken } = require("../config");
-const Users = require("../db/models");
+const {Users} = require("../db/models");
 
 const UsersCtrl = {
   signup: async (req, res) => {
@@ -8,7 +8,8 @@ const UsersCtrl = {
       res.status(201).json({
         message: `User has been created`,
       });
-    } catch {
+    } catch(err) {
+      console.log(err)
       res.sendStatus(400);
     }
   },

@@ -1,5 +1,4 @@
 const {moviesRequest}= require('../services/index')
-
 const MoviesCtrl={
   getPopMovies: async (req, res)=>{
     const {data, err}=  await moviesRequest.getPopularMovies()
